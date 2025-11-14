@@ -62,3 +62,15 @@ If PDF contains flagged words (e.g., "bad"), returns:
 - FastAPI (web framework)
 - PyPDF2 (PDF text extraction)
 - Uvicorn (ASGI server)
+
+## PR Summary
+
+This implementation merges the dev branch with the completed GPT-5-Nano + Moderation Pipeline.
+
+What was built: Modular service in Python; PDF text extraction → moderation (stub) → LLM with retry → JSON response.
+
+How to run: pip install -r requirements.txt; export OPENAI_API_KEY=key (USE_OPENROUTER=1 for OpenRouter); uvicorn app:app; curl POST /process with PDF.
+
+What's missing due to time: Real moderation API (currently stub checks words).
+
+OpenAI key plugs in: Set as env var, codes in src/llm/llm.py for API calls.
