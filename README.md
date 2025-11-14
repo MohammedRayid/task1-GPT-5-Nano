@@ -16,7 +16,12 @@ Minimal runnable service implementing a pipeline to process PDFs: extract text â
    pip install -r requirements.txt
    ```
 
-2. Run the service:
+2. (Optional for production testing) Set OpenAI API key:
+   ```
+   export OPENAI_API_KEY=your_api_key_here
+   ```
+
+3. Run the service:
    ```
    uvicorn app:app --reload
    ```
